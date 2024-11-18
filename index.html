@@ -75,13 +75,21 @@
             padding-left: 20px;
             list-style-type: disc;
         }
-        /* Art Section */
-        .art-section img {
-            max-width: 45%;
-            margin: 10px;
-            display: inline-block;
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
             border: 1px solid #ccc;
             border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
         /* Responsive Sidebar */
         @media screen and (max-width: 768px) {
@@ -97,6 +105,17 @@
             }
             main {
                 flex-direction: column;
+            }
+        }
+         /* Gallery Responsive */
+         @media screen and (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
             }
         }
         /* Button Styles */
@@ -184,6 +203,18 @@
                 <li><b>Chillbara with Coffee:</b> Depicted with a coffee cup for a laid-back vibe.</li>
                 <li><b>Chillbara Sleeping or Awake:</b> Reflects market activity by appearing drowsy or active.</li>
             </ul>
+
+            <div class="gallery">
+                <img src="chillbara_1.png" alt="Chillbara Scene 1">
+                <img src="chillbara_2.png" alt="Chillbara Scene 2">
+                <img src="chillbara_3.png" alt="Chillbara Scene 3">
+                <img src="chillbara_4.png" alt="Chillbara Scene 4">
+                <img src="chillbara_5.png" alt="Chillbara Scene 5">
+                <img src="chillbara_6.jpeg" alt="Chillbara Scene 6">
+                <img src="chillbara_7.png" alt="Chillbara Scene 7">
+                <img src="chillbara_8.png" alt="Chillbara Scene 8">
+                <img src="chillbara_9.png" alt="Chillbara Scene 9">
+            </div>
 
             <h2 id="media">Related Media and Future Prospects</h2>
             <p>
