@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chillbara</title>
+    <title>Chillbara $CHIL - staying chill is the key to succes</title>
     <!-- Include Font Awesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -44,6 +44,7 @@
             padding: 15px;
             background-color: #f1f1f1;
             border-right: 1px solid #ccc;
+            transition: all 0.3s;
         }
         .sidebar a {
             display: block;
@@ -54,7 +55,6 @@
         .sidebar a:hover {
             text-decoration: underline;
         }
-        /* Content Styles */
         .content {
             flex: 1;
             padding: 20px;
@@ -74,6 +74,30 @@
         .content ul {
             padding-left: 20px;
             list-style-type: disc;
+        }
+        /* Art Section */
+        .art-section img {
+            max-width: 45%;
+            margin: 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Responsive Sidebar */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+            }
+            .sidebar a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+            main {
+                flex-direction: column;
+            }
         }
         /* Button Styles */
         .buy-button {
